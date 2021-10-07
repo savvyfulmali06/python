@@ -1,2 +1,2 @@
 # python
-Hackerearth &amp; Hackerrank python problem solutions repository
+I have created this repository to store Hackerearth &amp; Hackerrank python problem solutions.
