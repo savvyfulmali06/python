@@ -5,7 +5,9 @@
 ##Take the last digit of the numbers that are available in the second half of the array (second 50% of the test case)
 ##Generate a number by using the digits that have been selected in the above steps
 
-
+##Using below rule -
+##A number is said to be divisible by 11 if the difference between the sum of the digits at the alternative places 
+##starting from the left or the right is either 0 or a number that is divisible by 11
 n=int(input())
 a=list(map(int,input().split()))
 sumEven=0
@@ -26,3 +28,32 @@ if (diff == 0 | diff%11==0):
 	print("OUI")
 else:
 	print("NON")
+	
+
+n=int(input())
+a=list(map(int,input().split()))
+for i in range(len(a)):
+	if i < (len(a)/2):
+		while a[i] > 10:
+			a[i]//=10
+	else:
+		a[i]%=10
+num=int("".join(map(str,a)))
+if (num%11==0): 
+	print("OUI")
+else:
+	print("NON")
+		
+
+##Using string manipulation
+
+n=int(input())
+a=input().split()
+num="".join([a[i][0] for i in range(n//2)])+"".join([a[i][-1] for i in range(n//2,n)])
+
+if (int(num)%11==0): 
+	print("OUI")
+else:
+	print("NON")
+
+
